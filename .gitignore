@@ -1,2 +1,2 @@
-config/*
+config/**
 go_build_main_go
