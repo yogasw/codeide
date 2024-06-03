@@ -7,6 +7,20 @@ CodeIDE is a tool that simplifies the use of VS Code for specific programming la
 go install github.com/yogasw/codeide
 ```
 
+## Usage
+
+Run the tool with the desired programming language:
+
+```bash
+./codeide golang
+```
+
+To create a new profile for a language:
+
+```bash
+./codeide create golang
+```
+
 # Development
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -34,20 +48,6 @@ Build the project:
 
 ```bash
 go build
-```
-
-## Usage
-
-Run the tool with the desired programming language:
-
-```bash
-./codeide golang
-```
-
-To create a new profile for a language:
-
-```bash
-./codeide create golang
 ```
 
 ## Built With
