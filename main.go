@@ -64,11 +64,18 @@ func openVSCode(cmd *cobra.Command, lang string) {
 	exPath := filepath.Dir(ex)
 
 	// Create a new command with the VS Code binary and the provided arguments
+	var args []string
+
+	if lang != "" {
+		args = append(args, "--args",
+			fmt.Sprintf("--user-data-dir=%s/config/%s/user-data", exPath, lang),
+			fmt.Sprintf("--extensions-dir=%s/config/%s/extensions", exPath, lang),
+		)
+	}
+
 	vscodeCmd := exec.Command(
 		vscodeBinaryDir,
-		"--args",
-		fmt.Sprintf("--user-data-dir=%s/config/%s/user-data", exPath, lang),
-		fmt.Sprintf("--extensions-dir=%s/config/%s/extensions", exPath, lang),
+		args...,
 	)
 
 	// Run the command
