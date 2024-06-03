@@ -80,8 +80,8 @@ func openVSCode(cmd *cobra.Command, lang string) {
 			return
 		}
 		args = append(args, "--args",
-			fmt.Sprintf("--user-data-dir=%s/config/%s/user-data", f, lang),
-			fmt.Sprintf("--extensions-dir=%s/config/%s/extensions", f, lang),
+			fmt.Sprintf("--user-data-dir=%s/user-data", f),
+			fmt.Sprintf("--extensions-dir=%s/extensions", f),
 		)
 	}
 
