@@ -1,4 +1,4 @@
-module github.com/yogasw/vscode-ide
+module github.com/yogasw/codeide
 
 go 1.22.3
 
